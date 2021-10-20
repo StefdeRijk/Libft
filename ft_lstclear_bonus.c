@@ -3,9 +3,9 @@ void	ft_lstclear(t_list **lst, void(*del)(void *))
 {
 	t_list	*temp;
 
-	if (lst == 0 || del == 0 || *lst == 0)
+	if (!lst || !del || !*lst)
 		return ;
-	while (lst != 0 && *lst != 0)
+	while (lst && *lst)
 	{
 		temp = (*lst)->next;
 		ft_lstdelone(*lst, del);

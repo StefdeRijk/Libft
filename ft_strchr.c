@@ -11,7 +11,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	while (*s1)
 	{
-		if (*s1 == c)
+		if (*s1 == (unsigned char)c)
 			return (s1);
 		s1++;
 	}

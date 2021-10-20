@@ -8,20 +8,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		len;
 
-	if (s1 == 0 || set == 0)
+	if (!s1 || !set)
 		return (0);
 	i = 0;
 	j = 0;
 	while ((ft_contains((char *)&s1[i], (char *)set, 1)))
 		i++;
 	j = ft_strlen((char *)s1);
-	if (j == 0 || i == j)
+	if (!j || i == j)
 		return (ft_strdup("\0"));
 	while ((ft_contains((char *)&s1[j - 1], (char *)set, 1)))
 		j--;
 	len = j - i;
 	str = malloc(len + 1);
-	if (str == 0)
+	if (!str)
 		return (0);
 	ft_memcpy(str, s1 + i, len);
 	str[len] = '\0';

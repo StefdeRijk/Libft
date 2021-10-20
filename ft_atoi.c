@@ -1,3 +1,4 @@
+#include <limits.h>
 int	ft_atoi(const char *str)
 {
 	int		n;
@@ -18,8 +19,9 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9' && *str != '\0')
 	{
 		i *= 10;
-		i += *str - 48;
+		i += *str - '0';
 		str++;
 	}
-	return ((int)i * n);
+	i *= n;
+	return ((int)i);
 }

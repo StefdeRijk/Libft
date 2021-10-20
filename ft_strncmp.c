@@ -7,7 +7,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	len = ft_strlen(s1) + 1;
 	if ((size_t)ft_strlen(s2) < len)
 		len = ft_strlen(s2) + 1;
-	if (len == 0)
+	if (!len)
 		len++;
 	if (len < n)
 		n = len;

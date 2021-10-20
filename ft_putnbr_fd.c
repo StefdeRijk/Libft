@@ -12,13 +12,13 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (nbr < 10)
 	{
-		c = (nbr % 10) + 48;
+		c = (nbr % 10) + '0';
 		ft_putchar_fd(c, fd);
 	}
 	else
 	{
 		ft_putnbr_fd(nbr / 10, fd);
-		c = (nbr % 10) + 48;
+		c = (nbr % 10) + '0';
 		ft_putchar_fd(c, fd);
 	}
 }

@@ -1,7 +1,7 @@
 #include "libft.h"
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (*del != 0 && lst != 0)
+	if (*del && lst)
 	{
 		(*del)(lst->content);
 		free(lst);

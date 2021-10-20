@@ -50,7 +50,7 @@ static char	*ft_numcpy(long nbr, int len, char *str)
 	while (nbr > 0)
 	{
 		len--;
-		str[len] = nbr % 10 + 48;
+		str[len] = nbr % 10 + '0';
 		nbr /= 10;
 	}
 	return (str);

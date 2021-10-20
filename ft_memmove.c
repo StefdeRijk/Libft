@@ -10,7 +10,7 @@ void	*ft_memmove(void *dst, void *src, size_t len)
 	i = 0;
 	dst1 = (void *)dst;
 	src1 = (void *)src;
-	if (dst1 == 0 && src1 == 0)
+	if (!dst1 && !src1)
 		return (0);
 	if (dst1 < src1)
 	{

@@ -12,14 +12,14 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 	int		words;
 
-	if (s == 0)
+	if (!s)
 		return (0);
 	words = ft_words((char *)s, c);
 	arr = malloc((words + 1) * sizeof(char *));
-	if (arr == 0)
+	if (!arr)
 		return (0);
 	ft_fill(arr, words, s, c);
-	if (arr == 0)
+	if (!arr)
 		return (0);
 	return (arr);
 }
@@ -40,7 +40,7 @@ static char	**ft_fill(char **arr, int words, char const *s, char c)
 		while (s[pos + len] != 0 && s[pos + len] != c)
 			len++;
 		arr[i] = malloc(len * sizeof(char) + 1);
-		if (arr[i] == 0)
+		if (!arr[i])
 		{
 			ft_free(arr, i);
 			return (0);

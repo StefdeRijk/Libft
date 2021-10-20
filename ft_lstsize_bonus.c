@@ -4,7 +4,7 @@ int	ft_lstsize(t_list *lst)
 	t_list	*cpy;
 	int		len;
 
-	if (lst == 0)
+	if (!lst)
 		return (0);
 	cpy = lst;
 	len = 1;
