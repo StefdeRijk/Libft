@@ -12,8 +12,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = malloc(l1 + l2 + 1);
 	if (!str)
 		return (0);
-	ft_memcpy(str, (char *)s1, l1);
-	ft_memcpy(str + l1, (char *)s2, l2);
+	ft_memmove(str, (char *)s1, l1);
+	ft_memmove(str + l1, (char *)s2, l2);
 	str[l1 + l2] = '\0';
 	return (str);
 }

@@ -8,6 +8,6 @@ char	*ft_strdup(const char *s1)
 	ptr = malloc(sizeof(char) * l);
 	if (!ptr)
 		return (0);
-	ft_memcpy(ptr, (char *)s1, l);
+	ft_memmove(ptr, (char *)s1, l);
 	return (ptr);
 }

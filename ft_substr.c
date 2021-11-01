@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc(len + 1);
 	if (!str)
 		return (0);
-	ft_memcpy(str, &s[start], len);
+	ft_memmove(str, (char *)&s[start], len);
 	str[len] = '\0';
 	return (str);
 }
